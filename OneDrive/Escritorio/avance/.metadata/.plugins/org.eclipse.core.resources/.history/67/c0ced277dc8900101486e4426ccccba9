@@ -1,0 +1,130 @@
+package bodega;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import javax.swing.JTextArea;
+import javax.swing.JScrollPane;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+@SuppressWarnings("unused")
+public class RegistrarProducto extends JFrame {
+
+	private static final long serialVersionUID = 1L;
+	private JPanel contentPane;
+	private JTextField txtnombre;
+	private JLabel lblStock;
+	private JTextField txtprecio;
+	private JTextField txtstock;
+	private JLabel lblRegistroDeProductos;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					RegistrarProducto frame = new RegistrarProducto();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public RegistrarProducto() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("NOMBRE");
+		lblNewLabel.setBounds(25, 41, 45, 13);
+		contentPane.add(lblNewLabel);
+		
+		txtnombre = new JTextField();
+		txtnombre.setBounds(92, 38, 96, 19);
+		contentPane.add(txtnombre);
+		txtnombre.setColumns(10);
+		
+		JLabel lblNewLabel_1 = new JLabel("PRECIO");
+		lblNewLabel_1.setBounds(25, 68, 45, 13);
+		contentPane.add(lblNewLabel_1);
+		
+		lblStock = new JLabel("STOCK");
+		lblStock.setBounds(25, 91, 45, 13);
+		contentPane.add(lblStock);
+		
+		txtprecio = new JTextField();
+		txtprecio.setBounds(92, 65, 96, 19);
+		txtprecio.setColumns(10);
+		contentPane.add(txtprecio);
+		
+		txtstock = new JTextField();
+		txtstock.setBounds(92, 91, 96, 19);
+		txtstock.setColumns(10);
+		contentPane.add(txtstock);
+		
+		lblRegistroDeProductos = new JLabel("REGISTRO DE PRODUCTOS");
+		lblRegistroDeProductos.setBounds(181, 10, 130, 19);
+		contentPane.add(lblRegistroDeProductos);
+		
+		JButton btnNewButton = new JButton("GUARDAR");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			String nombre = txtnombre.getText();
+			String precio = txtprecio.getText();
+			String stock = txtstock.getText();
+			if(nombre.isEmpty() || precioStr.isEmpty() || stockStr.isEmpty()) {
+	            txtArea.append("⚠️ Complete todos los campos.\n");
+	            else {
+	            	try {
+	            		double precio = Double.parseDouble(precioStr);
+	                    int stock = Integer.parseInt(stockStr);
+
+	                   
+	                    Producto p = new Producto(nombre, precio, stock);
+
+	                 
+	                    txtArea.append(p.toString() + "\n");
+
+	                 
+	                    txtNombre.setText("");
+	                    txtPrecio.setText("");
+	                    txtStock.setText("");
+	            	}
+	            	catch (NumberFormatException ex) {
+	            		txtarea.append("\nPrecio y Stock deben ser numéricos.");
+	            	}
+	            }
+			
+			
+			}
+		});
+		btnNewButton.setBounds(244, 37, 85, 21);
+		contentPane.add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton("LIMPIAR");
+		btnNewButton_1.setBounds(244, 64, 85, 21);
+		contentPane.add(btnNewButton_1);
+		
+		JTextArea txtarea = new JTextArea();
+		txtarea.setBounds(33, 130, 367, 123);
+		contentPane.add(txtarea);
+
+	}
+}

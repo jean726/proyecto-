@@ -1,0 +1,8 @@
+INDEX VERSION 1.134+C:\Users\varga\OneDrive\Escritorio\avance\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+2517086790.index
+1283417032.index
+1548287065.index
+3413270776.index
+2839313978.index
+3214301301.index

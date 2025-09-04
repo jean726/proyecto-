@@ -1,0 +1,103 @@
+package bodega;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import javax.swing.JTextArea;
+import javax.swing.JScrollPane;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+@SuppressWarnings("unused")
+public class RegistrarProducto extends JFrame {
+
+	private static final long serialVersionUID = 1L;
+	private JPanel contentPane;
+	private JTextField textField;
+	private JLabel lblStock;
+	private JTextField textField_1;
+	private JTextField textField_2;
+	private JLabel lblRegistroDeProductos;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					RegistrarProducto frame = new RegistrarProducto();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public RegistrarProducto() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("NOMBRE");
+		lblNewLabel.setBounds(25, 41, 45, 13);
+		contentPane.add(lblNewLabel);
+		
+		textField = new JTextField();
+		textField.setBounds(92, 38, 96, 19);
+		contentPane.add(textField);
+		textField.setColumns(10);
+		
+		JLabel lblNewLabel_1 = new JLabel("PRECIO");
+		lblNewLabel_1.setBounds(25, 68, 45, 13);
+		contentPane.add(lblNewLabel_1);
+		
+		lblStock = new JLabel("STOCK");
+		lblStock.setBounds(25, 91, 45, 13);
+		contentPane.add(lblStock);
+		
+		textField_1 = new JTextField();
+		textField_1.setBounds(92, 65, 96, 19);
+		textField_1.setColumns(10);
+		contentPane.add(textField_1);
+		
+		textField_2 = new JTextField();
+		textField_2.setBounds(92, 91, 96, 19);
+		textField_2.setColumns(10);
+		contentPane.add(textField_2);
+		
+		lblRegistroDeProductos = new JLabel("REGISTRO DE PRODUCTOS");
+		lblRegistroDeProductos.setBounds(181, 10, 130, 19);
+		contentPane.add(lblRegistroDeProductos);
+		
+		JButton btnNewButton = new JButton("GUARDAR");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnNewButton.setBounds(244, 37, 85, 21);
+		contentPane.add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton("LIMPIAR");
+		btnNewButton_1.setBounds(244, 64, 85, 21);
+		contentPane.add(btnNewButton_1);
+		
+		JTextArea textArea = new JTextArea();
+		textArea.setBounds(33, 130, 367, 123);
+		contentPane.add(textArea);
+
+	}
+}

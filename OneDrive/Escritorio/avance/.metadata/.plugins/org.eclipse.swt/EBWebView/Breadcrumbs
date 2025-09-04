@@ -1,0 +1,106 @@
+0:32:44 Microsoft.Shutdown.OnWindowClosingPostClearBrowsingData_NoBrowsingDataCleared
+0:32:44 Microsoft.Shutdown.TabStripModel.CloseAllTabs
+0:32:44 Microsoft.Shutdown.TabStripModel.CloseTabs
+0:32:44 Microsoft.Shutdown.TabStripModel.CloseTabs_EdgeBeforeClosingAllTabs
+0:32:44 Microsoft.Shutdown.TabStripModel.InternalCloseTabsImpl
+0:32:44 Microsoft.Shutdown.TabStripModel.InternalCloseTabsImpl_TabClosable
+0:32:44 Microsoft.Shutdown.TabStripModel.InternalCloseTabsImpl_ClosingAll
+0:32:44 Microsoft.Shutdown.TabStripModel.CloseWebContentses
+0:32:44 Microsoft.Shutdown.TabStripModel.CloseWebContentses_FastShutdown
+0:32:44 Microsoft.Shutdown.TabStripModel.ShouldRunUnloadListenerBeforeClosing_false
+0:32:44 Tab19 RenderProcessGone
+0:32:44 Microsoft.UnloadController.ClearUnloadState
+0:32:44 Microsoft.Shutdown.TabStripModel.RunUnloadListenerBeforeClosing_false
+0:32:44 Microsoft.Shutdown.TabStripModel.InternalCloseTabsImpl_ClosedAll
+0:32:44 Microsoft.Shutdown.TabStripModel.SendDetachWebContentsNotifications
+0:32:44 Microsoft.UnloadController.ClearUnloadState
+0:32:44 Browser19 Close Tab19 at 0
+0:32:44 Tab19 WebContentsDestroyed
+0:32:44 Microsoft.UnloadController.TabStripEmpty
+0:32:44 Microsoft.UnloadController.IsUnclosableApp_IsNotWebApp
+0:32:44 Microsoft.UnloadController.HasCompletedUnloadProcessing_True
+0:32:44 Microsoft.Shutdown.OnWindowClosing
+0:32:44 Microsoft.UnloadController.IsUnclosableApp_IsNotWebApp
+0:32:44 Microsoft.UnloadController.HasCompletedUnloadProcessing_True
+0:32:44 Microsoft.Shutdown.OnWindowClosingPostClearBrowsingData_NoBrowsingDataCleared
+0:32:44 Widget Closed: BrowserFrame
+0:32:44 Microsoft.UnloadController.HasCompletedUnloadProcessing_True
+0:32:44 Microsoft.Shutdown.OnWindowClosing
+0:32:44 Microsoft.Shutdown.OnWindowClosing_DeleteScheduled
+0:32:44 Microsoft.Browser_Removed
+0:32:45 Microsoft.NewBrowser_Popup
+0:32:45 Microsoft.BrowserList.AddBrowser
+0:32:45 Browser22 Insert active Tab22 at 0
+0:32:45 Tab22 StartNav174 #auto_toplevel
+0:32:45 Tab22 StartNav175 #typed
+0:32:46 Tab22 FinishNav174
+0:32:46 Tab22 PageLoad
+0:32:46 Tab22 FinishNav175
+0:32:46 Tab22 PageLoad
+0:32:46 Tab22 StartNav176 #typed
+0:32:46 Tab22 FinishNav176
+0:32:46 Tab22 PageLoad
+0:32:46 Tab22 StartNav177 #typed
+0:32:46 Tab22 FinishNav177
+0:32:46 Tab22 PageLoad
+0:32:47 Tab22 StartNav178 #typed
+0:32:47 Tab22 FinishNav178
+0:32:47 Tab22 PageLoad
+0:32:51 Tab11 StartNav179 #typed
+0:32:51 Tab11 FinishNav179
+0:32:51 Tab11 PageLoad
+0:32:58 Tab11 StartNav180 #typed
+0:32:58 Tab11 FinishNav180
+0:32:58 Tab11 PageLoad
+0:33:00 Tab11 StartNav181 #typed
+0:33:00 Tab11 FinishNav181
+0:33:00 Tab11 PageLoad
+0:33:02 Tab11 StartNav182 #typed
+0:33:02 Tab11 FinishNav182
+0:33:02 Tab11 PageLoad
+0:33:07 Tab11 StartNav183 #typed
+0:33:07 Tab11 FinishNav183
+0:33:07 Tab11 PageLoad
+0:33:08 Tab11 StartNav184 #typed
+0:33:08 Tab11 FinishNav184
+0:33:08 Tab11 PageLoad
+0:33:09 Tab11 StartNav185 #typed
+0:33:09 Tab11 FinishNav185
+0:33:09 Tab11 PageLoad
+0:33:09 Tab11 StartNav186 #typed
+0:33:09 Tab11 FinishNav186
+0:33:09 Tab11 PageLoad
+0:33:11 Tab11 StartNav187 #typed
+0:33:11 Tab11 FinishNav187
+0:33:11 Tab11 PageLoad
+0:33:16 Tab11 StartNav188 #typed
+0:33:16 Tab11 FinishNav188
+0:33:16 Tab11 PageLoad
+0:33:17 Tab11 StartNav189 #typed
+0:33:17 Tab11 FinishNav189
+0:33:17 Tab11 PageLoad
+0:33:20 Tab11 StartNav190 #typed
+0:33:20 Tab11 FinishNav190
+0:33:20 Tab11 PageLoad
+0:33:30 Tab11 StartNav191 #typed
+0:33:30 Tab11 FinishNav191
+0:33:30 Tab11 PageLoad
+0:33:40 Tab22 StartNav192 #typed
+0:33:40 Tab22 FinishNav192
+0:33:40 Tab22 PageLoad
+0:33:45 Tab22 StartNav193 #typed
+0:33:45 Tab22 FinishNav193
+0:33:45 Tab22 PageLoad
+0:33:51 Tab22 StartNav194 #typed
+0:33:51 Tab22 FinishNav194
+0:33:51 Tab22 PageLoad
+0:34:05 Tab22 StartNav195 #typed
+0:34:05 Tab22 FinishNav195
+0:34:05 Tab22 PageLoad
+0:34:10 Tab22 StartNav196 #typed
+0:34:10 Tab22 FinishNav196
+0:34:10 Tab22 PageLoad
+0:34:11 Tab22 StartNav197 #typed
+0:34:11 Tab22 FinishNav197
+0:34:11 Tab22 PageLoad
+0:36:03 Microsoft.UnloadController.IsUnclosableApp_IsNotWebApp

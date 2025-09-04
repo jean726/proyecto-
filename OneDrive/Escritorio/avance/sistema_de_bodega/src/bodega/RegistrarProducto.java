@@ -1,0 +1,143 @@
+package bodega;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import javax.swing.JTextArea;
+import javax.swing.JScrollPane;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+@SuppressWarnings("unused")
+public class RegistrarProducto extends JFrame implements ActionListener {
+
+	private static final long serialVersionUID = 1L;
+	private JTextField txtNombre;
+	private JLabel lblStock;
+	private JTextField txtPrecio;
+	private JTextField txtStock;
+	private JLabel lblRegistroDeProductos;
+	private JTextArea txtArea;
+	private JButton btnNewButton_1;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					RegistrarProducto frame = new RegistrarProducto();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public RegistrarProducto() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		JPanel contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("NOMBRE");
+		lblNewLabel.setBounds(22, 41, 60, 13);
+		contentPane.add(lblNewLabel);
+		
+		txtNombre = new JTextField();
+		txtNombre.setBounds(92, 38, 96, 19);
+		contentPane.add(txtNombre);
+		txtNombre.setColumns(10);
+		
+		JLabel lblNewLabel_1 = new JLabel("PRECIO");
+		lblNewLabel_1.setBounds(22, 68, 48, 13);
+		contentPane.add(lblNewLabel_1);
+		
+		lblStock = new JLabel("STOCK");
+		lblStock.setBounds(22, 94, 60, 13);
+		contentPane.add(lblStock);
+		
+		txtPrecio = new JTextField();
+		txtPrecio.setBounds(92, 65, 96, 19);
+		txtPrecio.setColumns(10);
+		contentPane.add(txtPrecio);
+		
+		txtStock = new JTextField();
+		txtStock.setBounds(92, 91, 96, 19);
+		txtStock.setColumns(10);
+		contentPane.add(txtStock);
+		
+		lblRegistroDeProductos = new JLabel("REGISTRO DE PRODUCTOS");
+		lblRegistroDeProductos.setBounds(92, 9, 211, 19);
+		contentPane.add(lblRegistroDeProductos);
+		
+		JButton btnNewButton = new JButton("GUARDAR");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String nombre = txtNombre.getText();   
+				String preciostr = txtPrecio.getText();
+				String stockstr = txtStock.getText();
+
+				if(nombre.isEmpty() || preciostr.isEmpty() || stockstr.isEmpty()) {
+				    txtArea.append("Complete todos los campos.\n");
+				} else {
+				    try {
+				        double precio = Double.parseDouble(preciostr);
+				        int	 stock = Integer.parseInt(stockstr);
+				        txtArea.setText("========================================\n");
+				        txtArea.append("   NOMBRE\tPRECIO\tSTOCK\n");
+				        txtArea.append("========================================\n");  
+				        txtArea.append(nombre + "\t" + precio + "\t" + stock + "\n");
+
+				       
+				        txtNombre.setText("");   
+				        txtPrecio.setText("");
+				        txtStock.setText("");
+				    } catch (NumberFormatException ex) {
+				        txtArea.append("completar todos los campos\n");
+				    }
+				}
+
+			
+			
+			}
+		});
+		btnNewButton.setBounds(244, 37, 105, 21);
+		contentPane.add(btnNewButton);
+		
+		btnNewButton_1 = new JButton("LIMPIAR");
+		btnNewButton_1.addActionListener(this);
+		btnNewButton_1.setBounds(244, 64, 105, 21);
+		contentPane.add(btnNewButton_1);
+		
+		txtArea = new JTextArea();
+		txtArea.setBounds(33, 130, 367, 123);
+		contentPane.add(txtArea);
+
+	}
+	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == btnNewButton_1) {
+			do_btnNewButton_1_actionPerformed(e);
+		}
+	}
+	
+	protected void do_btnNewButton_1_actionPerformed(ActionEvent e) {
+		txtNombre.setText("");
+		txtPrecio.setText("");
+        txtStock.setText("");
+        txtArea.setText("");
+	}
+}
