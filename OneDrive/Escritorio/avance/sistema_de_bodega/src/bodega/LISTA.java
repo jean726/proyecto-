@@ -28,7 +28,7 @@ public int getStock() {
 public void setStock(int stock) {
 	this.stock = stock;
 }
-
+//Esto es una modificacion
 
 }
 
